@@ -1,4 +1,4 @@
-from utils.pg_db import connection
+from task_utils.pg_db import connection
 
 def runTask(params):
     print("Running tezos accounts index task")

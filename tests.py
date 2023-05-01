@@ -1,5 +1,7 @@
 from tasks import tasks, tasksByKey
 import os
+import datetime
+from test_utils.verbose_timedelta import verbose_timedelta
 
 # Run file to test the modules
 
@@ -10,7 +12,14 @@ def runTask(task):
     print("Test params: ")
     print(test_params)
     print(" ")
+    start_time = datetime.datetime.now()
     task.runTask(test_params)
+    end_time = datetime.datetime.now()
+    end_time = datetime.datetime.now()
+    step_run_time = end_time - start_time
+    run_time_verbose = verbose_timedelta(step_run_time)
+
+    print(f"Completed task: {task.__name__} in {run_time_verbose} ({str(step_run_time)})")
     print(" ")
     print('=' * 20, " Task end ", '=' * 20)
     print(" ")
@@ -49,11 +58,13 @@ def findMissingImports():
 
 if __name__ == '__main__':
     print("Running tests")
-    runTasks()
+    # runTasks()
     findMissingImports()
 
     # Quickly test specific tasks
     # runTask(tasksByKey['tezos_accounts_index'])
+    runTask(tasksByKey['tezos_contract_statistics'])
+    runTask(tasksByKey['tezos_contract_statistics'])
 
     
     

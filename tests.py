@@ -2,6 +2,7 @@ from tasks import tasks, tasksByKey
 import os
 import datetime
 from test_utils.verbose_timedelta import verbose_timedelta
+import logging
 
 # Run file to test the modules
 
@@ -58,7 +59,8 @@ def findMissingImports():
 
 if __name__ == '__main__':
     print("Running tests")
-    # runTasks()
+    logging.basicConfig(level=logging.INFO)
+    runTasks()
     findMissingImports()
 
     # Quickly test specific tasks

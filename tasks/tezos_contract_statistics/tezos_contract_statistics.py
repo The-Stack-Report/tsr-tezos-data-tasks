@@ -6,7 +6,7 @@ from .queries import (
     create_contract_target_transactions_by_id_query,
     create_contract_sender_transactions_by_id_query
 )
-
+import logging
 
 TEST_PARAMS = {
     "contract_address": "KT1LHHLso8zQWQWg1HUukajdxxbkGfNoHjh6"
@@ -20,11 +20,12 @@ def load_contract_accounts():
     global accounts_df
     global accounts_by_id
     if not accounts_by_id == False:
-        print("returning accounts_by_id")
+        logging.info("returning accounts_by_id from global python cache")
         return accounts_df
     else:
+        logging.info("Reading accounts from cache directory")
         accounts_df = pd.read_csv("cache/accounts.csv")
-        print(f"Loaded {len(accounts_df)} accounts from cache index")
+        logging.info(f"Loaded {len(accounts_df)} accounts from cache index")
         accounts_by_id = dict(zip(accounts_df["Id"], accounts_df["Address"]))
         accounts_by_id[-1] = '__null__'
         return accounts_by_id
@@ -45,17 +46,18 @@ def load_contract_accounts_by_address():
 def runTask(params={}):
 
     PLACEHOLDER = "NO_ADDRESS_SPECIFIED"
-    print(params)
+    logging.info(params)
     contract_address = params.get("contract_address")
-    print("Running tezos contracts statistics task for address: ", contract_address)
+    logging.info(f"Running tezos contracts statistics task for address: {contract_address}")
+
     accounts = load_contract_accounts()
     accounts_by_kt = load_contract_accounts_by_address()
     account_id = accounts_by_kt.get(contract_address)
-    print("Account id: ", account_id, " from address: ", contract_address)
+    logging.info(f"Account id: {account_id} from address: {contract_address}")
     if account_id == None:
-        print("Account id not found.")
+        logging.info("Account id not found.")
     if contract_address == PLACEHOLDER:
-        print("No address specified, exiting")
+        logging.info("No address specified, exiting")
         raise Exception("No address specified, exiting")
 
     contract_target_transactions_by_id_query = create_contract_target_transactions_by_id_query(account_id)
@@ -65,7 +67,7 @@ def runTask(params={}):
 
     contract_sender_transactions_df = pd.read_sql(contract_sender_transactions_by_id_query, dbConnection)
 
-    print(contract_target_transactions_df)
-    print(contract_sender_transactions_df)
+    logging.info(contract_target_transactions_df)
+    logging.info(contract_sender_transactions_df)
 
 

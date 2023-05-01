@@ -9,7 +9,7 @@ ORDER BY "Id" DESC LIMIT 100
 """)
 
 def runTask(params):
-    print("Running tezos accounts index task")
+    print("Running latest blocks task")
     print(dbConnection)
     latest_blocks_df = pd.read_sql(get_latest_blocks, dbConnection)
     print(latest_blocks_df)
@@ -17,3 +17,4 @@ def runTask(params):
     cache_path = Path("cache")
     cache_path.mkdir(parents=True, exist_ok=True)
     latest_blocks_df.to_csv(cache_path / "latest_blocks.csv", index=False)
+    print("Stored latest blocks in cache/latest_blocks.csv")

@@ -16,3 +16,4 @@ def runTask(params):
     print(dbConnection)
     accounts_df = pd.read_sql(get_all_accounts, dbConnection)
     print(accounts_df)
+    

@@ -52,7 +52,7 @@ if __name__ == '__main__':
     runTasks()
     findMissingImports()
 
-    # Quickly specific tasks
+    # Quickly test specific tasks
     # runTask(tasksByKey['tezos_accounts_index'])
 
     

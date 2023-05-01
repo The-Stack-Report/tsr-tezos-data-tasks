@@ -18,3 +18,5 @@ def runTask(params):
     cache_path.mkdir(parents=True, exist_ok=True)
     latest_blocks_df.to_csv(cache_path / "latest_blocks.csv", index=False)
     print("Stored latest blocks in cache/latest_blocks.csv")
+    print("Returning task completion message to the worker.")
+    return True

@@ -3,13 +3,14 @@ import os
 
 # Run file to test the modules
 
-
-
 def runTask(task):
+    test_params = getattr(task, "TEST_PARAMS", None)
     print(" ")
     print('=' * 20, " Task: ",task.__name__, '=' * 20)
+    print("Test params: ")
+    print(test_params)
     print(" ")
-    task.runTask(None)
+    task.runTask(test_params)
     print(" ")
     print('=' * 20, " Task end ", '=' * 20)
     print(" ")

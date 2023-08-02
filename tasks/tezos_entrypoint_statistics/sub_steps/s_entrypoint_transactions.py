@@ -5,7 +5,7 @@ from ..queries import entrypoint_transactions_query_for_date
 from task_utils.blocks_index import get_blocks_index
 from task_utils.pg_db import dbConnection
 import sqlalchemy
-from shared_functions.tezos_transactions import add_addresses_from_tzkt_ids
+from task_utils.tezos_transactions import add_addresses_from_tzkt_ids
 
 
 # Prepares transactions df for entrypoint in batches per day

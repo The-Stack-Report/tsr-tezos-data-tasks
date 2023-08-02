@@ -4,8 +4,8 @@ from models.extended.dataset import Dataset
 import logging
 import json
 import datetime
-from shared_functions.tezos_usage_statistics import usage_statistics_from_transactions_df
-from shared_functions.tezos_transactions import load_and_prepare_transactions_df
+from task_utils.tezos_usage_statistics import usage_statistics_from_transactions_df
+from task_utils.tezos_transactions import load_and_prepare_transactions_df
 
 
 def run(task_params={}, system_params={}):

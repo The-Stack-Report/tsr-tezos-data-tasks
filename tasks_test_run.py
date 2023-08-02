@@ -104,7 +104,6 @@ if __name__ == '__main__':
 
     findMissingImports(tasks)
 
-
     if run_all_tasks:
         print("Running tests")
         logging.basicConfig(level=logging.INFO)

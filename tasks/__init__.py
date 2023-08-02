@@ -10,6 +10,9 @@ import tasks.tezos_contract_statistics as tezos_contract_statistics
 import tasks.tezos_contracts_index as tezos_contracts_index
 import tasks.tezos_entrypoint_statistics as tezos_entrypoint_statistics
 import tasks.tezos_entrypoints_index as tezos_entrypoints_index
+import tasks.tezos_entrypoints_rich_statistics_index as tezos_entrypoints_rich_statistics_index
+import tasks.tezos_wallet_statistics as tezos_wallet_statistics
+import tasks.tezos_wallets_index as tezos_wallets_index
 
 tasks = [
     tezos_account_statistics,
@@ -23,7 +26,10 @@ tasks = [
     tezos_contract_statistics,
     tezos_contracts_index,
     tezos_entrypoint_statistics,
-    tezos_entrypoints_index
+    tezos_entrypoints_index,
+    tezos_entrypoints_rich_statistics_index,
+    tezos_wallet_statistics,
+    tezos_wallets_index
 ]
 
 tasksByKey = {}

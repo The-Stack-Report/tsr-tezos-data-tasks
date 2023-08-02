@@ -1,6 +1,6 @@
 import pandas as pd
 from pathlib import Path
-from shared_functions.tezos_transactions import load_and_prepare_transactions_df
+from task_utils.tezos_transactions import load_and_prepare_transactions_df
 
 def run(task_params, system_params):
     entrypoint = task_params.get("entrypoint")

@@ -1,0 +1,1 @@
+from .tezos_entrypoints_rich_statistics_index import *

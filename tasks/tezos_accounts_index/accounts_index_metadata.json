@@ -1,0 +1,17 @@
+{
+    "identifier": "the-stack-report--tezos-accounts-index",
+    "title": "Tezos accounts index",
+    "description": "Table of Tezos account addresses together with TzKT postgres database row IDs. Compiled from publicly available transaction data published by users towards the public Tezos mainnet blockchain network.",
+    "subject": "Accounts created on the Tezos mainnet blockchain network.",
+    "coverage": "All accounts up to date: {{DATE}}",
+    "source": "Tezos mainnet, queried through TzKT indexer postgres database",
+    "creator": "The Stack Report",
+    "publisher": "The Stack Report",
+    "format": "CSV",
+    "type": "Index",
+    "language": "English",
+    "url": "https://the-stack-report.ams3.digitaloceanspaces.com/datasets/tezos/chain/indexes/tezos-accounts-index.csv",
+    
+    "__bucket": "the-stack-report",
+    "__key": "datasets/tezos/chain/indexes/tezos-accounts-index.csv"
+}

@@ -12,6 +12,12 @@ TEST_PARAMS = {
     "contract_address": "KT1LHHLso8zQWQWg1HUukajdxxbkGfNoHjh6"
 }
 
+expected_system_params = {
+    "mongodb": True,
+    "s3_client": True,
+    "s3_resource": True
+}
+
 accounts_df = False
 accounts_by_id = False
 accounts_by_address = False

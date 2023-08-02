@@ -1,0 +1,17 @@
+{
+    "identifier": "the-stack-report--tezos-entrypoints-index",
+    "title": "Tezos smart contract entrypoints index",
+    "description": "Semantically similarly named entry points aggregated from all smart contracts on the tezos blockchain.",
+    "subject": "Smart contracts on the Tezos mainnet blockchain network.",
+    "coverage": "All transactions towards smart contracts up to date: {{DATE}}",
+    "source": "Tezos mainnet, queried through TzKT indexer postgres database.",
+    "creator": "The Stack Report",
+    "publisher": "The Stack Report",
+    "format": "CSV",
+    "type": "Index",
+    "language": "English",
+    "url": "https://the-stack-report.ams3.digitaloceanspaces.com/datasets/tezos/chain/indexes/tezos-semantic-entrypoints-index.csv",
+
+    "__bucket": "the-stack-report",
+    "__key": "datasets/tezos/chain/indexes/tezos-semantic-entrypoints-index.csv"
+}

@@ -1,0 +1,1 @@
+from .tezos_entrypoints_index import *

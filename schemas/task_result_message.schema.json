@@ -1,0 +1,19 @@
+{
+    "title": "Task result message",
+    "description": "Json object which describes the result of a task run.",
+    "type": "object",
+    "properties": {
+        "task_id": {
+            "description": "The id of the task that was run.",
+            "type": "string"
+        },
+        "result": {
+            "description": "The result of the task run.",
+            "type": "string"
+        },
+        "message": {
+            "description": "A message describing the result of the task run.",
+            "type": "string"
+        }
+    }
+}
